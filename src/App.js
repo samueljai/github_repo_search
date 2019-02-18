@@ -6,7 +6,18 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          Header
         </header>
+        <main>
+          <div className="repoSearch">Search Bar</div>
+          <div className="repoMain">
+            <div className="repoReadMe">ReadMe</div>
+            <div className="repoInfo">Info</div>
+          </div>
+        </main>
+        <footer>
+          footer
+        </footer>
       </div>
     );
   }
