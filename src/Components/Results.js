@@ -19,15 +19,18 @@ class Results extends Component {
     if (loading) return (<h3 className="loading">is loading...</h3>);
 
     return (
-      <div className="repoResults">
-        {items.map(result => {
-          return (
-            <div className="resultsCard">
-              <p>{result.name}</p>
-            </div>
-          )
-        })}
-      </div>
+      <ul className="repoResults">
+        {items.map(result => (
+          <li className="resultsCard" key={result.id} >
+            <h3>{result.name}</h3>
+            <p>Owner Avatar URL: {result.owner.avatar_url}</p>
+            <p>Owner: {result.owner.login}</p>
+            <p>Open Issues: {result.open_issues}</p>
+            <p>Total Forks: {result.forks}</p>
+            <p>Repo URL: {result.html_url}</p>
+          </li>
+        ))}
+      </ul>
     );
   }
 

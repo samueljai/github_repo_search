@@ -7,11 +7,12 @@
   align-items: center;
   justify-content: center;
   background-color: #f6f6f6;
+  list-style-type: none;
 }
 
 .resultsCard {
   width: 80vw;
-  min-height: 100px;
+  min-height: 200px;
   box-shadow: 0 0 25px 0 rgba(26,26,26,.1);
   background-color: #fff;
   margin-top: 5vw;
