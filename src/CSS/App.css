@@ -21,7 +21,7 @@ footer {
   height: 20vh;
   width: 100vw;
   color: #fff;
-  background-color: #333;
+  background-color: #003366;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -31,13 +31,6 @@ footer img {
   width: 2rem;
   height: 2rem;
   padding: 0 2px 0 2px
-}
-
-.repoSearch {
-  width: 100%;
-  min-height: 15vh;
-  box-shadow: 0 0 25px 0 rgba(26,26,26,.1);
-  z-index: 3;
 }
 
 /* Tablet: Screens above 701px and below 901px */

@@ -18,7 +18,7 @@ class App extends Component {
         </header>
         <main>
           <SearchForm getSearchValue={this.getSearchValue} />
-          {value && <Results />}
+          <Results value={value} />
         </main>
         <footer>
           <h6>Developed by:</h6>
@@ -39,8 +39,6 @@ class App extends Component {
     console.log('search value: ' + value);
     this.setState({ value })
   }
-
-
 }
 
 export default App;

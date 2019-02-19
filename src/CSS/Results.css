@@ -1,20 +1,13 @@
 /* Mobile-First: Screens below 701px */
-.repoMain {
+.repoResults {
   width: 100vw;
   min-height: 55vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #f6f6f6;
-}
-
-.repoReadMe {
-  width: 100vw;
-  min-height: 27.5vh;
-}
-
-.repoInfo {
-  width: 100vw;
-  min-height: 27.5vh;
+  border: 1px solid red;
 }
 
 /* Tablet: Screens above 701px and below 901px */
@@ -23,9 +16,7 @@
 
 /* Large Tablet: Screens above 901px and below 1201px */
 @media only screen and (min-width: 901px) {
-  .repoMain {
-    flex-direction: row;
-  }
+
 }
 
 /* Non-mobile: Screens above 1201px */

@@ -22,7 +22,8 @@ form input {
   width: 80vw;
   font-size: 1rem;
   border: none;
-  border-bottom: 2px solid #feda6a
+  border-bottom: 2px solid #feda6a;
+  padding: 0 10px;
 }
 
 form input:focus { 
@@ -60,7 +61,7 @@ form button:hover {
   
   form input {
     font-size: 1.2rem;
-    width: 60vw;
+    width: 50vw;
   }
 }
 

@@ -13,9 +13,9 @@ class SearchForm extends Component {
       <div className="repoSearch">
         <form onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" value={value} onChange={this.handleChange} placeholder="Enter a repo name here" />
+            <input type="text" value={value} onChange={this.handleChange} placeholder="Enter repo name here..." />
           </label>
-          <button type="submit" value="Submit">Submit</button>
+          <button type="submit" value="Submit">Search</button>
         </form>
       </div>
     );
