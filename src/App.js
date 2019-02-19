@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './CSS/App.css';
 import SearchForm from './Components/SearchForm';
+import Results from './Components/Results';
 
 class App extends Component {
   state = {
@@ -8,6 +9,8 @@ class App extends Component {
   }
 
   render() {
+    const { value } = this.state;
+
     return (
       <div className="App">
         <header>
@@ -15,10 +18,7 @@ class App extends Component {
         </header>
         <main>
           <SearchForm getSearchValue={this.getSearchValue} />
-          <div className="repoMain">
-            <div className="repoReadMe">ReadMe</div>
-            <div className="repoInfo">Info</div>
-          </div>
+          {value && <Results />}
         </main>
         <footer>
           <h6>Developed by:</h6>
@@ -37,7 +37,10 @@ class App extends Component {
 
   getSearchValue = (value) => {
     console.log('search value: ' + value);
+    this.setState({ value })
   }
+
+
 }
 
 export default App;

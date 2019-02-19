@@ -40,33 +40,12 @@ footer img {
   z-index: 3;
 }
 
-.repoMain {
-  width: 100vw;
-  min-height: 55vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #f6f6f6;
-}
-
-.repoReadMe {
-  width: 100vw;
-  min-height: 27.5vh;
-}
-
-.repoInfo {
-  width: 100vw;
-  min-height: 27.5vh;
-}
-
 /* Tablet: Screens above 701px and below 901px */
 @media only screen and (min-width: 701px) {
 }
 
 /* Large Tablet: Screens above 901px and below 1201px */
 @media only screen and (min-width: 901px) {
-  .repoMain {
-    flex-direction: row;
-  }
 }
 
 /* Non-mobile: Screens above 1201px */
