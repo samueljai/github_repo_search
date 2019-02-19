@@ -10,15 +10,15 @@ class SearchForm extends Component {
     const { value } = this.state;
 
     return (
-      <div className="repoSearch">
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            <input type="text" value={value} onChange={this.handleChange} placeholder="Enter repo name here..." />
-          </label>
+      <form className="repoSearch" onSubmit={this.handleSubmit}>
+        <label>
+          <input type="text" value={value} onChange={this.handleChange} placeholder="Enter repo name here..." />
+        </label>
+        <div className="buttonGroup">
           <button type="submit" value="Submit">Search</button>
           <button onClick={this.reset} >Clear</button>
-        </form>
-      </div>
+        </div>
+      </form>
     );
   }
 

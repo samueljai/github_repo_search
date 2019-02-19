@@ -12,23 +12,83 @@
 
 .resultsCard {
   width: 80vw;
+  min-width: 400px;
   min-height: 200px;
   box-shadow: 0 0 25px 0 rgba(26,26,26,.1);
   background-color: #fff;
   margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .resultsCard:last-child {
   margin-bottom: 5vw;
 }
 
+.resultBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h3 {
+  padding: 5px;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #feda6a;
+  border-radius: 4.5rem;
+}
+
+.resultData {
+  width: 100%;
+}
+
+.resultData p {
+  line-height: 1.5rem;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.resultsCard a {
+  padding: 5px;
+  outline-width: 0;
+  font-size: 0.8rem;
+  background-color: #feda6a;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
 /* Tablet: Screens above 701px and below 901px */
 @media only screen and (min-width: 701px) {
+  .resultBox {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .avatar {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .resultData {
+    width: 60%;
+  }
 }
 
 /* Large Tablet: Screens above 901px and below 1201px */
 @media only screen and (min-width: 901px) {
-
+  .avatar {
+    width: 9rem;
+    height: 9rem;
+  }
 }
 
 /* Non-mobile: Screens above 1201px */

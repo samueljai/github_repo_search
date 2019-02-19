@@ -7,14 +7,25 @@ header {
   height: 10vh;
   width: 100vw;
   background-color: #003366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
   color: #feda6a;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
   min-height: 70vh;
+}
+
+h2 {
+  font-size: 1.2rem;
+  padding: 10px;
 }
 
 footer {
@@ -35,6 +46,9 @@ footer img {
 
 /* Tablet: Screens above 701px and below 901px */
 @media only screen and (min-width: 701px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 /* Large Tablet: Screens above 901px and below 1201px */

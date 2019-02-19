@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../CSS/Results.css'
 import * as api from '../Utils/api';
+import dayjs from 'dayjs';
+import ErrorPage from './ErrorPage';
 
 class Results extends Component {
   state = {
@@ -13,23 +15,37 @@ class Results extends Component {
     const { items, loading, err } = this.state
 
     //To-Do:
-    // change to error page
     // add loading spinner
-    if (err) return (<p>err = {err}</p>)
-    if (loading) return (<h3 className="loading">is loading...</h3>);
+    if (err) return <ErrorPage err={err} />
+    if (loading) return (<h3 className="loading">Loading...</h3>);
 
+    if (!items.length) return (
+      <ul className="repoResults">
+        <li className="resultsCard">
+          <h3>No results found...Search again!</h3>
+        </li>
+      </ul>
+    )
     return (
       <ul className="repoResults">
-        {items.map(result => (
-          <li className="resultsCard" key={result.id} >
-            <h3>{result.name}</h3>
-            <p>Owner Avatar URL: {result.owner.avatar_url}</p>
-            <p>Owner: {result.owner.login}</p>
-            <p>Open Issues: {result.open_issues}</p>
-            <p>Total Forks: {result.forks}</p>
-            <p>Repo URL: {result.html_url}</p>
-          </li>
-        ))}
+        {items.map(result => {
+          return (
+            <li className="resultsCard" key={result.id} >
+              <h3>{result.name} by {result.owner.login}</h3>
+              <div className="resultBox">
+                <img className="avatar" src={result.owner.avatar_url} alt={`${result.owner.login}'s avatar`} />
+                <div className="resultData">
+                  <p>Description: {result.description}</p>
+                  <p>Created: {dayjs(result.created_at).format('DD/MM/YYYY')}</p>
+                  <p>Open Issues: {result.open_issues}</p>
+                  <p>Total Forks: {result.forks}</p>
+                  <p>Last Updated: {dayjs(result.updated_at).format('DD/MM/YYYY')}</p>
+                </div>
+              </div>
+              <a href={result.html_url} rel="noopener noreferrer" target="_blank">View Repo</a>
+            </li>
+          )
+        })}
       </ul>
     );
   }
