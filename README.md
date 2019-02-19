@@ -4,7 +4,7 @@ GitHub Repo Search is a single page web application tool that utilises GitHub AP
 
 The application offers a detail view of information about a repository. 
 
-This detail view includes the name, author and description of the repo. It also shows when the repo was created, the number of open issues, number of forks, and when it was last updated.
+This detail view includes the name, author and description of the repo. It also shows when the repo was created, the number of open issues, number of forks, and when it was last updated. There is also a link for the user to view the repo and ReadMe on github. 
 
 ## Prerequisites
 React.js
