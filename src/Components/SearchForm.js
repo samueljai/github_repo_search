@@ -16,6 +16,7 @@ class SearchForm extends Component {
             <input type="text" value={value} onChange={this.handleChange} placeholder="Enter repo name here..." />
           </label>
           <button type="submit" value="Submit">Search</button>
+          <button onClick={this.reset} >Clear</button>
         </form>
       </div>
     );
@@ -32,6 +33,11 @@ class SearchForm extends Component {
     const { getSearchValue } = this.props;
     // call the function to pass data back to app
     getSearchValue(value);
+    // reset form
+    this.setState({ value: "" })
+  }
+
+  reset = () => {
     // reset form
     this.setState({ value: "" })
   }

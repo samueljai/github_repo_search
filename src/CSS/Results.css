@@ -9,6 +9,18 @@
   background-color: #f6f6f6;
 }
 
+.resultsCard {
+  width: 80vw;
+  min-height: 100px;
+  box-shadow: 0 0 25px 0 rgba(26,26,26,.1);
+  background-color: #fff;
+  margin-top: 5vw;
+}
+
+.resultsCard:last-child {
+  margin-bottom: 5vw;
+}
+
 /* Tablet: Screens above 701px and below 901px */
 @media only screen and (min-width: 701px) {
 }
