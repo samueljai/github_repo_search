@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+import './CSS/App.css';
+import SearchForm from './Components/SearchForm';
 
 class App extends Component {
+  state = {
+    value: "",
+  }
+
   render() {
     return (
       <div className="App">
@@ -9,7 +14,7 @@ class App extends Component {
           GitHub Repo Search
         </header>
         <main>
-          <div className="repoSearch">Search Bar</div>
+          <SearchForm getSearchValue={this.getSearchValue} />
           <div className="repoMain">
             <div className="repoReadMe">ReadMe</div>
             <div className="repoInfo">Info</div>
@@ -28,6 +33,10 @@ class App extends Component {
         </footer>
       </div>
     );
+  }
+
+  getSearchValue = (value) => {
+    console.log('search value: ' + value);
   }
 }
 

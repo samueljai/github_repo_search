@@ -1,0 +1,69 @@
+/* Mobile-First: Screens below 701px */
+.repoSearch {
+  width: 100%;
+  min-height: 15vh;
+  box-shadow: 0 0 25px 0 rgba(26,26,26,.1);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+form input {
+  width: 80vw;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #feda6a
+}
+
+form input:focus { 
+  outline-width: 0;
+}
+
+form button {
+  outline-width: 0;
+  width: 100px;
+  font-size: 1.2rem;
+  background-color: #feda6a;
+  border: none;
+  color: #003366;
+  text-align: center;
+  border: 2px solid #003366;
+  border-radius: 4px
+}
+
+form button:hover {
+  background-color: #003366;
+  color: #feda6a;
+  border: 2px solid #feda6a;
+  cursor: pointer;
+}
+
+/* Tablet: Screens above 701px and below 901px */
+@media only screen and (min-width: 701px) {
+  form input {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large Tablet: Screens above 901px and below 1201px */
+@media only screen and (min-width: 901px) {
+  
+  form input {
+    font-size: 1.2rem;
+    width: 60vw;
+  }
+}
+
+/* Non-mobile: Screens above 1201px */
+@media only screen and (min-width: 1201px) {
+}
