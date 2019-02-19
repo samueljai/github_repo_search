@@ -21,7 +21,7 @@ run npm start
 ```
 
 ## Links 
-- Deployed App: 
+- Deployed App: https://sjd-github-repo-search.netlify.com
 
 ## Authors
 Samuel Jai
