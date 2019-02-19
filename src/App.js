@@ -18,7 +18,7 @@ class App extends Component {
         </header>
         <main>
           <SearchForm getSearchValue={this.getSearchValue} />
-          <Results value={value} />
+          {value ? <Results value={value} /> : <h3>Search for a Repository Name above</h3>}
         </main>
         <footer>
           <h6>Developed by:</h6>
@@ -36,7 +36,6 @@ class App extends Component {
   }
 
   getSearchValue = (value) => {
-    console.log('search value: ' + value);
     this.setState({ value })
   }
 }
