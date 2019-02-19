@@ -6,14 +6,14 @@
 header {
   height: 10vh;
   width: 100vw;
-  background-color: #003366;
+  background-color: #595387;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 h1 {
-  color: #feda6a;
+  color: #fff;
   font-size: 1.8rem;
 }
 
@@ -21,6 +21,10 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 70vh;
+}
+
+.landingImg {
+  height: 55vh;
 }
 
 h2 {
@@ -32,7 +36,7 @@ footer {
   height: 20vh;
   width: 100vw;
   color: #fff;
-  background-color: #003366;
+  background-color: #524364;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -44,10 +48,17 @@ footer img {
   padding: 0 2px 0 2px
 }
 
-/* Tablet: Screens above 701px and below 901px */
+/* Tablet: Screens above 701px and below 755px */
 @media only screen and (min-width: 701px) {
   h1 {
     font-size: 2rem;
+  }
+}
+/* Tablet: Screens above 755px and below 901px */
+@media only screen and (min-width: 755px) {
+  .landingImg {
+    width: 100%;
+    height: auto;
   }
 }
 

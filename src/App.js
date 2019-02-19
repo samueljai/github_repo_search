@@ -18,7 +18,12 @@ class App extends Component {
         </header>
         <main>
           <SearchForm getSearchValue={this.getSearchValue} />
-          {value ? <Results value={value} /> : <h2>Search for a Repository Name above</h2>}
+          {value ? <Results value={value} />
+            :
+            <div className="repoResults">
+              <img className="landingImg" src="https://github.githubassets.com/images/modules/explore/social.jpg" alt="landing_page_image" />
+            </div>
+          }
         </main>
         <footer>
           <h6>Developed by:</h6>
