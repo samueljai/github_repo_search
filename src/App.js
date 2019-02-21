@@ -5,11 +5,11 @@ import Results from './Components/Results';
 
 class App extends Component {
   state = {
-    value: "",
+    searchValue: "",
   }
 
   render() {
-    const { value } = this.state;
+    const { searchValue } = this.state;
 
     return (
       <div className="App">
@@ -18,7 +18,7 @@ class App extends Component {
         </header>
         <main>
           <SearchForm getSearchValue={this.getSearchValue} />
-          {value ? <Results value={value} />
+          {searchValue ? <Results searchValue={searchValue} />
             :
             <div className="repoResults">
               <img className="landingImg" src="https://github.githubassets.com/images/modules/explore/social.jpg" alt="landing_page_image" />
@@ -40,8 +40,8 @@ class App extends Component {
     );
   }
 
-  getSearchValue = (value) => {
-    this.setState({ value })
+  getSearchValue = (searchValue) => {
+    this.setState({ searchValue })
   }
 }
 

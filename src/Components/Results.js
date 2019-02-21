@@ -7,17 +7,17 @@ import Result from './Result';
 class Results extends Component {
   state = {
     loading: true,
-    items: [],
+    resultItems: [],
     err: ""
   }
 
   render() {
-    const { items, loading, err } = this.state
+    const { resultItems, loading, err } = this.state
 
     if (err) return <ErrorPage err={err} />
     if (loading) return (<h3 className="loading">Loading...</h3>);
 
-    if (!items.length) return (
+    if (!resultItems.length) return (
       <ul className="repoResults">
         <li className="resultsCard">
           <h3>No results found...Search again!</h3>
@@ -26,27 +26,27 @@ class Results extends Component {
     )
     return (
       <ul className="repoResults">
-        {items.map(result => <Result result={result} />)}
+        {resultItems.map(result => <Result result={result} />)}
       </ul>
     );
   }
 
   componentDidMount() {
-    const { value } = this.props;
-    this.getGitHubResults(value);
+    const { searchValue } = this.props;
+    this.getGitHubResults(searchValue);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const valuleUpdated = prevProps.value !== this.props.value;
+    const valuleUpdated = prevProps.searchValue !== this.props.searchValue;
     if (valuleUpdated) {
-      this.setState({ loading: true }, () => this.getGitHubResults(this.props.value))
+      this.setState({ loading: true }, () => this.getGitHubResults(this.props.searchValue))
     }
   }
 
-  getGitHubResults(value) {
-    api.getRepoResults(value)
+  getGitHubResults(searchValue) {
+    api.getRepoResults(searchValue)
       .then(items => {
-        this.setState({ items: items, loading: false })
+        this.setState({ resultItems: items, loading: false })
       })
       .catch(err => {
         this.setState({ err: err })

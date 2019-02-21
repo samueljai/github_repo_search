@@ -3,16 +3,16 @@ import '../CSS/SearchForm.css'
 
 class SearchForm extends Component {
   state = {
-    value: "",
+    searchValue: "",
   }
 
   render() {
-    const { value } = this.state;
+    const { searchValue } = this.state;
 
     return (
       <form className="repoSearch" onSubmit={this.handleSubmit}>
         <label>
-          <input type="text" value={value} onChange={this.handleChange} placeholder="Enter repo name here..." />
+          <input type="text" value={searchValue} onChange={this.handleChange} placeholder="Enter repo name here..." />
         </label>
         <div className="buttonGroup">
           <button type="submit" value="Submit">Search</button>
@@ -24,22 +24,22 @@ class SearchForm extends Component {
 
   handleChange = (event) => {
     const { value } = event.target
-    this.setState({ value });
+    this.setState({ searchValue: value });
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const { value } = this.state;
+    const { searchValue } = this.state;
     const { getSearchValue } = this.props;
     // call the function to pass data back to app
-    getSearchValue(value);
+    getSearchValue(searchValue);
     // reset form
-    this.setState({ value: "" })
+    this.setState({ searchValue: "" })
   }
 
   reset = () => {
     // reset form
-    this.setState({ value: "" })
+    this.setState({ searchValue: "" })
   }
 }
 
