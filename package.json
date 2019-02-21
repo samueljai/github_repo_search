@@ -7,7 +7,8 @@
     "dayjs": "^1.8.6",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-spinners": "^0.5.1"
   },
   "scripts": {
     "start": "react-scripts start",

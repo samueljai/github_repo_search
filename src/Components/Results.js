@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import '../CSS/Results.css'
 import * as api from '../Utils/api';
+import { css } from '@emotion/core';
 import ErrorPage from './ErrorPage';
 import Result from './Result';
+import { RiseLoader } from 'react-spinners';
+
+const override = css`
+    display: block;
+    margin: auto auto;
+`;
 
 class Results extends Component {
   state = {
@@ -15,7 +22,14 @@ class Results extends Component {
     const { resultItems, loading, err } = this.state
 
     if (err) return <ErrorPage err={err} />
-    if (loading) return (<h3 className="loading">Loading...</h3>);
+    if (loading) return (
+      <RiseLoader
+        css={override}
+        sizeUnit={"px"}
+        size={15}
+        color={'#595387'}
+      />
+    );
 
     if (!resultItems.length) return (
       <ul className="repoResults">
