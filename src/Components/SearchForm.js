@@ -12,7 +12,7 @@ class SearchForm extends Component {
     return (
       <form className="repoSearch" onSubmit={this.handleSubmit}>
         <label>
-          <input type="text" value={searchValue} onChange={this.handleChange} placeholder="Enter repo name here..." />
+          <input type="text" autofocus="true" value={searchValue} onChange={this.handleChange} placeholder="Enter repo name here..." />
         </label>
         <div className="buttonGroup">
           <button type="submit" value="Submit">Search</button>
